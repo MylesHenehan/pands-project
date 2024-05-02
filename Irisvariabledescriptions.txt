@@ -1,0 +1,40 @@
+Here is the description of the sepal length variable:
+count      8.000000
+mean      23.271425
+std       51.247113
+min        0.828066
+25%        4.900000
+50%        5.821667
+75%        6.775000
+max      150.000000
+
+Here is the description of the sepal width variable:
+count    150.000000
+mean       3.054000
+std        0.433594
+min        2.000000
+25%        2.800000
+50%        3.000000
+75%        3.300000
+max        4.400000
+
+Here is the description of the petal length variable:
+count    150.000000
+mean       3.758667
+std        1.764420
+min        1.000000
+25%        1.600000
+50%        4.350000
+75%        5.100000
+max        6.900000
+
+Here is the description of the petal width variable:
+count    150.000000
+mean       1.198667
+std        0.763161
+min        0.100000
+25%        0.300000
+50%        1.300000
+75%        1.800000
+max        2.500000
+

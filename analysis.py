@@ -15,7 +15,6 @@ file = 'iris/iris.data' # we will assign the path of our dataset to the variable
 df = pd.read_csv(file, header=None) # we then use the .read_csv function from pandas to read in our data. Since there is no header, we want the data from the first row, hence "Header=None".
 print(df) # as a test, let's print it. This will result in the first and last five rows being printed.
 
-# Since the dataset doesn't have headers, we will assign each data series to the right variables, using the information in the iris.names file for reference
 sepallen = df[0]
 sepalwidth = df[1]
 petallen = df[2]
@@ -61,6 +60,8 @@ plt.title('Petal Width of Iris Flowers')
 plt.savefig('petalwidth_histogram.png')
 
 
-
+# Simplying this code by creating a function
+def irishist(data, xlabel, title, filename)
+    
 
 
