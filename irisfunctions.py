@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def vardescruibe var:
+def vardescribe(var):
     print (var.describe())
 
 
@@ -14,7 +14,7 @@ def irisdatahist(data, xlabel, title, filename):
     plt.show()
 
 
-def scatter_plots(x_variable, y_variables, irisdict): #Create scatter plots with each variable as the x-axis against the specified y variables.
+def scatterplots(x_variable, y_variables, irisdict): #Create scatter plots with each variable as the x-axis against the specified y variables.
     
    # Parameters:
     #    x_variable (str): The variable to use as the x-axis.
