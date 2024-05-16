@@ -1,9 +1,16 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def vardescribe(var):
-    print (var.describe())
 
+def datasummary(listofvars, names):
+    with open('Irisdatasummary.txt', 'w') as ivd: #function starts by creating a file called irisdatasummary which we will write to
+        for l in listofvars:
+            ivd.write(f"Here is a description of the variable {str(names)}:\n")
+            description = l.describe()
+            ivd.write(description.to_string())
+            ivd.write("\n\n")
+
+        
 
 def irisdatahist(data, xlabel, title, filename):
     plt.hist(data, bins=10, color='yellow', edgecolor='black')
