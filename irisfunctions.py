@@ -11,15 +11,15 @@ def datasummary(listoftuples):
             ivd.write(description.to_string())
             ivd.write("\n\n")
 
-        
 
-def irisdatahist(data, xlabel, title, filename):
-    plt.hist(data, bins=10, color='yellow', edgecolor='black')
-    plt.xlabel(xlabel)
-    plt.ylabel('No. of Iris Flowers')
-    plt.title(title)
-    plt.savefig(filename)
-    plt.show()
+def irisdatahist(listoftuples):
+    for name, df in listoftuples:
+        plt.hist(df, bins=10, color='yellow', edgecolor='black')
+        plt.xlabel(f"{name} (cm)")
+        plt.ylabel('Quantity')
+        plt.title(f"{name} of Iris flowers")
+        plt.savefig(f"{name}.png")
+        plt.show()
 
 def irisscatter(variablecombinations):
     for (name1, df1), (name2, df2) in variablecombinations:
@@ -29,5 +29,4 @@ def irisscatter(variablecombinations):
         plt.ylabel(name2)
         plt.title(f"{name1} vs {name2}")
         plt.show()
-
 
