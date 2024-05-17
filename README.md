@@ -21,7 +21,7 @@ The main component of this project is a Python file called analysis.py, which ca
 - Reads in the dataset and assigns each data frame to a variable name
 - Writes a description of each of the 4 main numerical variables and stores this in a single txt file.
 - Outputs histograms to show the spread of each numerical variable and saves these as png files.
-- Creates a set of scatter plots showing the relationship between each possible combination of variables.
+- Creates a set of scatter plots, showing the relationship between each possible combination of variables.
 - Using an example scatter plot, fits the best fit line and gets the Pearson Correlation Coefficient
 - Addresses the differences between iris species by creating a representation which includes 3 variables
 

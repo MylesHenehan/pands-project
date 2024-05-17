@@ -9,6 +9,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import itertools as it
 
 # Reading in our dataset
 file = 'iris/iris.data' # we will assign the path of our dataset to the variable "file"
@@ -57,4 +58,20 @@ irisdatahist(petalwidth, 'Petal width (cm)', 'Petal Width of Iris Flowers', 'pet
     
 
 # Project Aim 3: Output a scatter plot of each pair of variables
+
+#from irisfunctions import irisscatter
+
+#irisscatter(sepallen, variablelist)
+
+import itertools as it #this module is very helpful as it contains the .combinations() function, which allows us to get all the combinations of our variables.
+
+variablelist = [("Sepal Length", sepallen), ("Sepal Width", sepalwidth), ("Petal Length", petallen), ("Petal Width", petalwidth)]
+varcombinations = it.combinations(variablelist, 2)
+
+from irisfunctions import irisscatter
+irisscatter(varcombinations)
+
+
+
+
 
