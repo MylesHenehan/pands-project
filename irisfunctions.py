@@ -2,11 +2,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def datasummary(listofvars, names):
+def datasummary(listoftuples):
     with open('Irisdatasummary.txt', 'w') as ivd: #function starts by creating a file called irisdatasummary which we will write to
-        for l in listofvars:
-            ivd.write(f"Here is a description of the variable {str(names)}:\n")
-            description = l.describe()
+        for name, df in listoftuples:
+            description = df.describe()
+            ivd.write(f"Here is a description of the variable {name}:\n")
             ivd.write(description.to_string())
             ivd.write("\n\n")
 

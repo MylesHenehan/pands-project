@@ -25,14 +25,13 @@ species = df[4]
 
 # Project Aim 1: Output a summary of each variable to a single text file.
 
-# To simplify this, I have created a function called datasummary
+# To simplify this, I have created a function called datasummary.
 
-variablelist = [sepallen, sepalwidth, petallen, petalwidth] # let's first make a list of our data frames so they are easy to manipulate.
-names = ["sepallen", "sepalwidth", "petallen", "petalwidth"]
+variablelist = [("Sepal Length", sepallen), ("Sepal Width", sepalwidth), ("Petal Length", petallen), ("Petal Width", petalwidth)] # let's first make a list of our data frames so they are easy to manipulate.
 
 from irisfunctions import datasummary 
 
-datasummary(variablelist, names)
+datasummary(variablelist)
 
 
 

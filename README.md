@@ -14,6 +14,18 @@ The data set contains 150 instances, split evenly between 3 different types (oth
 
 ## Variables within the Dataset
 
+
 ## Contents of the py file
+The main component of this project is a Python file called analysis.py, which carries out a number of actions to help us explore the Iris data set. It is also accompanied by a file named functions.py, which stores the main functions created for this project.
+
+- Reads in the dataset and assigns each data frame to a variable name
+- Writes a description of each of the 4 main numerical variables and stores this in a single txt file.
+- Outputs histograms to show the spread of each numerical variable and saves these as png files.
+- Creates a set of scatter plots showing the relationship between each possible combination of variables.
+- Using an example scatter plot, fits the best fit line and gets the Pearson Correlation Coefficient
+- Addresses the differences between iris species by creating a representation which includes 3 variables
 
 ## References
+- Fisher,R. A.. (1988). Iris. UCI Machine Learning Repository. https://doi.org/10.24432/C56C76.
+- Turney, S. (2022). "Pearson Correlation Coefficient (r) | Guide & Examples". Available at: https://www.scribbr.com/statistics/pearson-correlation-coefficient/#:~:text=The%20Pearson%20correlation%20coefficient%20(r,the%20relationship%20between%20two%20variables [Accessed 14 May 2024]
+- Waskom, M. (n.d.). "Visualizing statistical relationships". Available at: https://seaborn.pydata.org/tutorial/relational.html [Accessed 14 May 2024]

@@ -1,4 +1,4 @@
-Here is a description of the variable ['sepallen', 'sepalwidth', 'petallen', 'petalwidth']:
+Here is a description of the variable Sepal Length:
 count    150.000000
 mean       5.843333
 std        0.828066
@@ -8,7 +8,7 @@ min        4.300000
 75%        6.400000
 max        7.900000
 
-Here is a description of the variable ['sepallen', 'sepalwidth', 'petallen', 'petalwidth']:
+Here is a description of the variable Sepal Width:
 count    150.000000
 mean       3.054000
 std        0.433594
@@ -18,7 +18,7 @@ min        2.000000
 75%        3.300000
 max        4.400000
 
-Here is a description of the variable ['sepallen', 'sepalwidth', 'petallen', 'petalwidth']:
+Here is a description of the variable Petal Length:
 count    150.000000
 mean       3.758667
 std        1.764420
@@ -28,7 +28,7 @@ min        1.000000
 75%        5.100000
 max        6.900000
 
-Here is a description of the variable ['sepallen', 'sepalwidth', 'petallen', 'petalwidth']:
+Here is a description of the variable Petal Width:
 count    150.000000
 mean       1.198667
 std        0.763161
