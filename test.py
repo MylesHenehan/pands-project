@@ -20,19 +20,16 @@ species = df[4]
 variablelist = [("Sepal Length", sepallen), ("Sepal Width", sepalwidth), ("Petal Length", petallen), ("Petal Width", petalwidth)]
 
 
-def bestfit(x,y):
+#
 
-    m, c = np.polyfit(x, y, 1) # The .polyfit function takes a set of data points (x, y) and fits a polynomial of specified degree to the data. The degree 1 here represents a straight line.
-    m, c # Here, "m" represents the slope, while "c" represents the intercept of the line. Let's make this clear for ease of reference by assigning them to more easy-to-understand variables.
+# third variable
+grouped = df.groupby(4) # The easiest way is to use a .groupby() function (OpenAI, 2024)
 
-    slope = m
-    intercept = c
-    print(f'Slope: {slope}')
-    print(f'Intercept: {intercept}')
+for species, data in grouped:
+    plt.hist(data[2], bins=10, alpha=0.5, label=species)
 
-    fig, ax = plt.subplots()
-    ax.plot(x, y, 'x')
-    ax.plot(x, slope * x + intercept, 'r-') #This time we're adding another plot command to insert our best fit line, with "r-" representing a solid red line.
-    ax.set_xlabel(x)
-    ax.set_ylabel(y)
-    plt.show()
+plt.legend()
+plt.xlabel('Petal Length')
+plt.ylabel('Frequency')
+plt.title('Histogram of Petal Length by Species')
+plt.show()

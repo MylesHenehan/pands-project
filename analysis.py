@@ -5,7 +5,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-import itertools as it
+import itertools as it # this module is very helpful as it contains the .combinations() function, which allows us to get all the combinations of our variables. We will use this for our scatter plots.
 
 # Reading in our dataset
 file = 'iris/iris.data' # we will assign the path of our dataset to the variable "file"
@@ -20,7 +20,13 @@ petallen = df[2]
 petalwidth = df[3]
 species = df[4]
 
-variablelist = [("Sepal Length", sepallen), ("Sepal Width", sepalwidth), ("Petal Length", petallen), ("Petal Width", petalwidth)] # let's first make a list of our data frames so they are easy to manipulate.
+# let's first make a list of our data frames so they are easy to manipulate.
+variablelist = [
+    ("Sepal Length", sepallen), 
+    ("Sepal Width", sepalwidth), 
+    ("Petal Length", petallen), 
+    ("Petal Width", petalwidth)
+]
 
 
 # Project Aim 1: Output a summary of each variable to a single text file.
@@ -28,8 +34,11 @@ variablelist = [("Sepal Length", sepallen), ("Sepal Width", sepalwidth), ("Petal
 # To simplify this, I have created a function called datasummary, which uses the describe() function.
 
 from irisfunctions import datasummary 
-
 datasummary(variablelist)
+
+
+
+
 
 
 # Project Aim 2: Save a Histogram of each variable to png files.
@@ -41,39 +50,23 @@ from irisfunctions import irisdatahist
 irisdatahist(variablelist)
     
 
-# Project Aim 3: Output a scatter plot of each pair of variables
 
-import itertools as it #this module is very helpful as it contains the .combinations() function, which allows us to get all the combinations of our variables.
+
+
+
+# Project Aim 3: Output a scatter plot of each pair of variables
 varcombinations = it.combinations(variablelist, 2)
 
 from irisfunctions import irisscatter
 irisscatter(varcombinations)
 
+
+
 # Project Aim 4: Other useful analyses
 
-# Best Fit line:
-#m, c = np.polyfit(petallen, petalwidth, 1) # The .polyfit function takes a set of data points (x, y) and fits a polynomial of specified degree to the data. The degree 1 here represents a straight line.
-#m, c # Here, "m" represents the slope, while "c" represents the intercept of the line. Let's make this clear for ease of reference by assigning them to more easy-to-understand variables.
-
-#slope = m
-#intercept = c
-#print(f'Slope: {slope}')
-#print(f'Intercept: {intercept}')
-
-#fig, ax = plt.subplots()
-#ax.plot(petallen, petalwidth, 'x')
-#ax.plot(petallen, slope * petallen + intercept, 'r-') #This time we're adding another plot command to insert our best fit line, with "r-" representing a solid red line.
-#ax.set_xlabel('Petal Length (cm)')
-#ax.set_ylabel('Petal Width (cm)')
-#plt.show()
-
-# Pearson Correlation Coefficient
-#r = petallen.corr(petalwidth) # .corr() is a pandas function which calculates correlation between two data frames, using the Pearson correlation coefficient by default.
-#print("Pearson correlation coefficient:", r)
-
-
+# Best Fit Line
 from irisfunctions import bestfit
-print("To see the best fit line for any combination of variables, please choose the corresponding number")
+print("To see the best fit line for a combination of variables, please choose the corresponding numbers")
 x = input("Please input your first variable: \n\n1.Sepal Length\n\n2.Sepal Width\n\n3.Petal Length\n\n4.Petal Width\n\n")
 y = input("\n\nPlease input your second variable: \n\n1.Sepal Length\n\n2.Sepal Width\n\n3.Petal Length\n\n4.Petal Width\n\n")
 
@@ -97,3 +90,19 @@ elif y == str(4):
 
 bestfit(xvar,yvar)
 
+
+# Pearson Correlation Coefficient
+r = xvar.corr(yvar) # .corr() is a pandas function which calculates correlation between two data frames, using the Pearson correlation coefficient by default.
+print("Pearson correlation coefficient:", r)
+
+
+
+# The hidden variable
+grouped = df.groupby(4) # The easiest way to showcase this is to use a .groupby() function (OpenAI, 2024)
+for species, data in grouped:
+    plt.hist(data[2], bins=10, alpha=0.5, label=species)
+plt.legend()
+plt.xlabel('Petal Length')
+plt.ylabel('Frequency')
+plt.title('Histogram of Petal Length by Species')
+plt.show()

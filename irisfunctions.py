@@ -16,7 +16,7 @@ def irisdatahist(listoftuples):
     for name, df in listoftuples:
         plt.hist(df, bins=10, color='yellow', edgecolor='black')
         plt.xlabel(f"{name} (cm)")
-        plt.ylabel('Quantity')
+        plt.ylabel('Frequency')
         plt.title(f"{name} of Iris flowers")
         plt.savefig(f"{name}.png")
         plt.show()
@@ -41,7 +41,8 @@ def bestfit(x,y):
 
     fig, ax = plt.subplots()
     ax.plot(x, y, 'x')
-    ax.plot(x, slope * x + intercept, 'r-') #This time we're adding another plot command to insert our best fit line, with "r-" representing a solid red line.
-    ax.set_xlabel(x)
-    ax.set_ylabel(y)
+    ax.plot(x, slope * x + intercept, 'r-') # This time we're adding another plot command to insert our best fit line, with "r-" representing a solid red line.
+    ax.set_xlabel("var 1")
+    ax.set_ylabel("var 2")
     plt.show()
+
