@@ -30,3 +30,18 @@ def irisscatter(variablecombinations):
         plt.title(f"{name1} vs {name2}")
         plt.show()
 
+def bestfit(x,y):
+
+    m, c = np.polyfit(x, y, 1) # The .polyfit function takes a set of data points (x, y) and fits a polynomial of specified degree to the data. The degree 1 here represents a straight line.
+    m, c # Here, "m" represents the slope, while "c" represents the intercept of the line. Let's make this clear for ease of reference by assigning them to more easy-to-understand variables.
+    slope = m
+    intercept = c
+    print(f'Slope: {slope}')
+    print(f'Intercept: {intercept}')
+
+    fig, ax = plt.subplots()
+    ax.plot(x, y, 'x')
+    ax.plot(x, slope * x + intercept, 'r-') #This time we're adding another plot command to insert our best fit line, with "r-" representing a solid red line.
+    ax.set_xlabel(x)
+    ax.set_ylabel(y)
+    plt.show()
