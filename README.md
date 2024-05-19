@@ -29,8 +29,12 @@ Since the dataset itself does not have headers, we are using the information in 
  - When looking at scatter plots, it can often be useful to work out the best fit line to visualise the overall trend in the data. For example, when you look at Petal Length versus Petal Width above, you can see quite a linear progression of the data. Let's use a best fit line to demonstrate this. In order to plot this, we will first need to determine the slope of the line and the point at which it intercepts the y axis, and then use the y = mx + c method.
 
 ### 6. Gets the Pearson correlation coefficient of said 2 variables
+This method measures the extent to which the points in a scatter plot cluster around a straight line, and is widely used in statistics and data analysis to assess the relationship between two continuous variables. This coefficient can range between 0 and 1, with 0 implying no correlation, 1 implying a very positive correlation, and -1 implying a very negative correlation (Turney, 2022).
 
-### 7. Addresses the affect of the categorical variable, species, by creating a representation which includes this as a third variable.
+### 7. Addresses the effect of the categorical variable species by creating a representation which includes this as a third variable.
+Sometimes when plotting data, the data can appear in clusters. In this case, it is common that a categorical variable is affecting the data. Let's look at Petal Length histogram as an example. [Placeholder]
+
+## Conclusion
 
 ## References
 - Fisher,R. A.. (1988). Iris. UCI Machine Learning Repository. https://doi.org/10.24432/C56C76.
