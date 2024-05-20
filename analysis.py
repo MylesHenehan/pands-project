@@ -96,7 +96,7 @@ bestfit(xvar,yvar) # finally, we use these values as the parameters for our func
 
 
 # B. Pearson Correlation Coefficient
-r = xvar.corr(yvar) # .corr() is a pandas function which calculates correlation between two data frames, using the Pearson correlation coefficient by default (insert source).
+r = xvar.corr(yvar) # .corr() is a pandas function which calculates correlation between two data frames, using the Pearson correlation coefficient by default (Kulcsar, 2022).
 print(f"The Pearson correlation coefficient for this pair of variables is {r}")
 
 # We then use an if statement to tell the user if their chosen variables display a positive or negative correlation:
@@ -120,11 +120,11 @@ else:
 # C. The hidden variable
 # The easiest way to showcase categorical variables affecting the data is to use a .groupby() function (OpenAI, 2024)
 df.columns = ['sepallen', 'sepalwidth', 'petallen', 'petalwidth', 'species'] # I quickly added the headings of our data frames to a simple list to make the code below more clear.
-grouped = df.groupby('species') # this function splits the data into groups according to some criteria, in this case by the types in data frame 4 (species)
+grouped = df.groupby('species') # this function splits the data into groups according to some criteria, in this case by the types in data frame "species"
 for species, data in grouped: # this line iterates over the pairs of variables (species and data).
-    plt.hist(data['petallen'], bins=10, alpha=0.5, label=species) # in this case, I want to look at Petal Length, so I'm using 2 as the index.
+    plt.hist(data['petallen'], bins=10, alpha=0.5, label=species) # in this case, I want to look at Petal Length.
 plt.legend()
 plt.xlabel("Petal Length")
 plt.ylabel("Frequency")
 plt.title("Histogram of Petal Length by Species")
-plt.show() # after putting in our labels, legend, and title, now we can take a look at the histogram to see how the third variable affects our spread.
+plt.show() # after putting in our labels, legend, and title, now we can take a look at the histogram to see how the extra variable affects our spread.

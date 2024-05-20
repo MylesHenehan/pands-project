@@ -38,7 +38,13 @@ Finally, I wanted to showcase the effect that a hidden categorical variable can 
 Through this project, we've attained an in-depth grasp of the attributes of the Iris dataset, employing Python to conduct diverse analyses and visualisations. The project successfully accomplished several goals, encompassing variable identification and description, histogram and scatter plot creation, and explorations of additional areas such as the best fit line, the Pearson correlation coefficient, and the impact of hidden variables. This exploration has yielded significant insights into data analysis methodologies and techniques, underscoring Python's efficacy as a tool for navigating and comprehending complex datasets.
 
 ## References
+- Bobbitt, Z. (2022). "How to Modify a Matplotlib Histogram Color (With Examples)". Available at: https://www.statology.org/matplotlib-histogram-color/ [Accessed 1 May 2024].
 - Fisher,R. A.. (1988). Iris. UCI Machine Learning Repository. https://doi.org/10.24432/C56C76.
-- OpenAI. (2024). ChatGPT. OpenAI. Available at: https://openai.com/chatgpt (Accessed: 19 May 2024).
+- GeeksforGreeks. (2019). "Python | Pandas DataFrame.to_string". Available at: https://www.geeksforgeeks.org/python-pandas-dataframe-to_string/ [Accessed 17 May 2024].
+- Gruppetta, S. (n.d.). "Visualizing Data in Python Using plt.scatter()". Available at: https://realpython.com/visualizing-python-plt-scatter/ [Accessed 20 May 2024].
+- Kulcsar, L. (2022), "Correlation: What is it? How to calculate it? .corr() in pandas". Available at https://data36.com/correlation-definition-calculation-corr-pandas/#:~:text=corr()%20by%20default%20will,Spearman's%20coefficient%20and%20nonlinear%20correlation [Accessed 14 May 2024]
+- OpenAI. (2024). ChatGPT. OpenAI. Available at: https://openai.com/chatgpt [Accessed: 19 May 2024].
+- Ridolfi, A. (2020). "np.polyfit() — Curve Fitting with NumPy Polyfit". Available at: https://blog.finxter.com/np-polyfit/ [Accessed 16 May 2024].
 - Turney, S. (2022). "Pearson Correlation Coefficient (r) | Guide & Examples". Available at: https://www.scribbr.com/statistics/pearson-correlation-coefficient/#:~:text=The%20Pearson%20correlation%20coefficient%20(r,the%20relationship%20between%20two%20variables [Accessed 14 May 2024]
 - Waskom, M. (n.d.). "Visualizing statistical relationships". Available at: https://seaborn.pydata.org/tutorial/relational.html [Accessed 14 May 2024]
+- W3Schools. (2022). "Pandas DataFrame describe() Method". Available at: https://www.w3schools.com/python/pandas/ref_df_describe.asp [Accessed 3 May 2024]
