@@ -66,7 +66,7 @@ irisscatter(varcombinations)
 
 # Best Fit Line
 from irisfunctions import bestfit
-print("To see the best fit line for a combination of variables, please choose the corresponding numbers")
+print("To see the best fit line for a combination of variables, please choose the corresponding numbers.")
 x = input("Please input your first variable: \n\n1.Sepal Length\n\n2.Sepal Width\n\n3.Petal Length\n\n4.Petal Width\n\n")
 y = input("\n\nPlease input your second variable: \n\n1.Sepal Length\n\n2.Sepal Width\n\n3.Petal Length\n\n4.Petal Width\n\n")
 
