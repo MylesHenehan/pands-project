@@ -99,14 +99,15 @@ bestfit(xvar,yvar) # finally, we use these values as the parameters for our func
 r = xvar.corr(yvar) # .corr() is a pandas function which calculates correlation between two data frames, using the Pearson correlation coefficient by default (Kulcsar, 2022).
 print(f"The Pearson correlation coefficient for this pair of variables is {r}")
 
-# We then use an if statement to tell the user if their chosen variables display a positive or negative correlation:
-if r >= 0.7:
+# We then use if statements to tell the user if their chosen variables display a positive or negative correlation:
+# The values used for the if statements below are taken from Turney's guide to the Pearson Correlation Coefficient on Scribbr (2022).
+if 1 > r >= 0.5:
     print("This indicates a strong positive correlation.")
-elif 0.3 <= r < 0.7:
+elif 0.3 <= r < 0.5:
     print("This indicates a moderate positive correlation.")
 elif 0 < r < 0.3:
     print("This indicates a weak positive correlation.")
-elif r <= -0.7:
+elif -1 < r <= -0.5:
     print("This indicates a strong negative correlation.")
 elif -0.7 < r <= -0.3:
     print("This indicates a moderate negative correlation.")
